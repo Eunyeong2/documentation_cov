@@ -88,7 +88,6 @@ We use [grcov](https://github.com/mozilla/grcov), which can generate source-base
     - `grcov` provides [various types](https://github.com/mozilla/grcov#alternative-reports) of outputs. Users can set one of the output types provided by `grcov` in `visualize-cov.py`.
     - If user choose `html`, the `index.html` will generate in `cov_report.zip`. Then, user can see that reports in local.
 ## Example of code coverage report
----
 Belows are example of code coverage reports for terraswap's components.
 
 - [factory](https://procfs-web3.github.io/terraswap-tc-coverage/factory/)
