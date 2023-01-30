@@ -7,6 +7,7 @@ However, measuring code coverage can be one of means to evaluate the baseline qu
 We use [grcov](https://github.com/mozilla/grcov), which can generate source-based coverage for a Rust project. To obtain a coverage report of cosmwasm smart contracts using `grcov`, we need to extend some code in contracts. 
 
 1. Additional codes, which mean code coverage information are needed in contract's code - `contract.rs`.
+
    ```
    mod memory {
     use std::convert::TryFrom;
@@ -61,6 +62,7 @@ We use [grcov](https://github.com/mozilla/grcov), which can generate source-base
    - `-C instrument-coverage`
 3. Use these artifacts in spaceship's python codes.
 4. Generate some python codes like below.
+
     ```
     test-<component_name>
     |_____test.py
@@ -75,12 +77,14 @@ We use [grcov](https://github.com/mozilla/grcov), which can generate source-base
    - `artifacts` and `artifacts-cov` contains WASM binaries and native binaries that assist the execution of contracts in `test.py` and `test-with-cov.py`.
    - [example](https://github.com/dream-academy/terraswap-tc)
 5. Run `test-with-cov.py` script to generate `cov` directory.
+
     ```
     python3 test-with-cov.py
     ```
    - `test.py` and `test-with-cov.py` depends on spaceship. We recommend to run in virtualenv.
    - [How to run](https://github.com/pr0cf5/spaceship/tree/main/tutorials/building)
 6. Run `visualize-cov.py` script to generate a `grcov` style coverage report.
+
     ```
     python3 visualize-cov.py <cov_dir> <src_dir>
     ```
