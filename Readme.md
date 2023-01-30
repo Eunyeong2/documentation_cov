@@ -1,11 +1,9 @@
 ## Code coverage
----
 Code coverage is not a silver bullet for smart contract testing, because code in smart contracts usually exhibit extremely context-dependent behavior and thus obtaining high coverage does not guarantee that all behaviors have been explored. 
 
 However, measuring code coverage can be one of means to evaluate the baseline quality of testcases. So, we provide this tutorial, which explains how to measure of code coverage and how to obtain a coverage report of cosmwasm smart contracts.
 
 ## Usage
----
 We use [grcov](https://github.com/mozilla/grcov), which can generate source-based coverage for a Rust project. To obtain a coverage report of cosmwasm smart contracts using `grcov`, we need to extend some code in contracts. 
 
 1. Additional codes, which mean code coverage information are needed in contract's code - `contract.rs`.
